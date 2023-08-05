@@ -48,8 +48,6 @@ async function getUserLocationDetails(){
     const data = await fetch(`https://ipinfo.io/${USER_IP}?token=${TOKEN}`);
     USER_LOC_OBJ = await data.json();
 
-    alert("If the data isn't loading, Try turning off your adBlocker then refresh the website.")
-
     city.innerText = USER_LOC_OBJ.city;
     region.innerText = USER_LOC_OBJ.region;
 
@@ -136,4 +134,6 @@ getIP();
 startBtn.addEventListener('click', ()=>{
     landingPage.style.display = 'none';
     mainPage.style.display = 'block';
+    alert("If data doesn't load, then turn off your adBlocker and refresh the website.");
+
 })
