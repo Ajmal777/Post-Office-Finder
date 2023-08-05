@@ -109,19 +109,19 @@ function createData(obj){
     div.className = "post-office";
     div.innerHTML = 
     `<div class="post-office-name">
-        Name <span id="po-name">${obj.Name}</span>
+        Name: <span id="po-name">${obj.Name}</span>
     </div>
     <div class="post-office-branch">
-        Branch Type <span id="po-branch">${obj.BranchType}</span>
+        Branch Type: <span id="po-branch">${obj.BranchType}</span>
     </div>
     <div class="post-office-delivery-status">
-        Delivery Status <span id="op-delivery">${obj.DeliveryStatus}</span>
+        Delivery Status: <span id="op-delivery">${obj.DeliveryStatus}</span>
     </div>
     <div class="post-office-district">
-        District <span id="po-district">${obj.District}</span>
+        District: <span id="po-district">${obj.District}</span>
     </div>
     <div class="post-office-division">
-        Division <span id="po-division">${obj.Division}</span>
+        Division: <span id="po-division">${obj.Division}</span>
     </div>`
 
     po_list.appendChild(div);

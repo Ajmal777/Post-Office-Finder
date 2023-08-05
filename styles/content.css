@@ -117,7 +117,7 @@ header span{
     width: 30%;
     font-family: Montserrat;
     font-weight: 700;
-    line-height: 2;
+    gap: 15px;
     color: #B8BCCC;
     border-radius: 10px;
 }
@@ -131,7 +131,6 @@ header span{
     display: -webkit-box;
     -webkit-box-orient: vertical;
     -webkit-line-clamp: 2;
-    width: 100%;
     overflow: hidden;
     text-overflow: ellipsis;
     word-wrap: break-word;
