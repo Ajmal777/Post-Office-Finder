@@ -40,8 +40,6 @@ async function getIP(){
 
     landingPageIP.innerText = USER_IP;
     mainPageIP.innerText = USER_IP;
-
-    getUserLocationDetails();
 }
 
 async function getUserLocationDetails(){
@@ -134,6 +132,9 @@ getIP();
 startBtn.addEventListener('click', ()=>{
     landingPage.style.display = 'none';
     mainPage.style.display = 'block';
+   
+    getUserLocationDetails();
+
     alert("If data doesn't load, then turn off your adBlocker and refresh the website.");
 
 })
