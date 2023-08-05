@@ -1,0 +1,150 @@
+#main-section{
+    display: none;
+}
+
+header{
+    padding: 1em;
+    display: flex;
+    flex-flow: column;
+    gap: 1em;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
+}
+
+header > .details{
+    display: flex;
+    gap: 2rem;
+}
+
+header > .details > .section{
+    min-width: fit-content;
+    flex-grow: 1;
+    background-color: #80808045;
+    padding: 1rem;
+    border-radius: 10px;
+}
+header > .details > .section > div{
+    display: flex;
+    justify-content: space-between;
+    gap: 15px;
+}
+header span{
+    color: #B8BCCC;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 2;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    word-wrap: break-word;
+}
+#user-ip{
+    display: inline-flex;
+}
+
+@media (max-width: 875px){
+    header > .details{
+        flex-direction: column;
+        gap: 1rem;
+    }
+}
+
+.more-details, .post-offices{
+    display: flex;
+    flex-flow: column;
+    padding: 1em;
+}
+.more-details > .details{
+    font-family: 'Inter';
+    font-weight: 700;
+    line-height: 41px;
+    border-radius: 10px;
+    background: #80808045;
+    padding: 1em;
+}
+.more-details > .details span{
+    font-weight: 400;
+    color: #B8BCCC;
+}
+
+
+.post-offices{
+    align-items: center;
+}
+
+.search-bar{
+    width: 100%;
+}
+.wrapper{
+    display: flex;
+    gap: 10px;
+    border: 3px solid #575A85;
+    background: transparent;
+    border-radius: 10px;
+    align-items: center;
+    padding: 5px 1em;
+    width: auto;
+}
+#searchBar{
+    flex-grow: 1;
+    border: none;
+    background-color: transparent;
+    font-size: 1.2rem;
+    padding: 10px;
+    font-family: Montserrat;
+    font-weight: 400;
+    color: #B8BCCC;
+    width: 100%;
+}
+#searchBar:focus{
+    outline: none;
+}
+
+.post-office-list{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    gap: 1em;
+    margin: 1rem 0;
+    width: 100%;
+}
+
+.post-office{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    padding: 15px;
+    background-color: #575A85;
+    width: 30%;
+    font-family: Montserrat;
+    font-weight: 700;
+    line-height: 2;
+    color: #B8BCCC;
+    border-radius: 10px;
+}
+
+.post-office > div{
+    display: flex;
+    justify-content: space-between;
+    gap: 15px;
+}
+.post-office span{
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 2;
+    width: 100%;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    word-wrap: break-word;
+    font-weight: 500;
+}
+
+@media (max-width: 600px){
+    .post-office{
+        width: 60%;
+    }
+}
+@media (max-width: 350px) {
+    .post-office{
+        width: 100%;
+    }
+}

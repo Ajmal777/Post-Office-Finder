@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Post Office Finder</title>
+    <link rel="stylesheet" href="styles/style.css">
+    <link rel="stylesheet" href="styles/landingPage.css">
+    <link rel="stylesheet" href="styles/content.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="shortcut icon" href="https://img.icons8.com/?size=512&id=12027&format=png" type="image/x-icon">
+    <script defer src="scripts/script.js"></script>
+</head>
+<body>
+    <section class="landing" id="landing-section">
+        <div class="container">
+            <div class="left">
+                <h2>Post Office Application.</h2>
+                <p>This Application Allows you to extract information about the nearest Post Offices, based on your location.</p>
+                <div class="img-wrapper">
+                    <div class="img-container">
+                        <img src="resources/undraw_messenger_re_8bky 1.svg" alt="postman">
+                    </div>
+                </div>
+            </div>
+            <div class="right">
+                <h1>Your Current IP Address is <span id="landing-page__ip"></span></h1>
+                <button class="start" id="landing-page__btn">Get Started</button>
+            </div>
+        </div>
+    </section>
+
+    <main id="main-section">
+        <header>
+            <div class="ip-address">
+                IP Address: <span id="user-ip"></span>
+            </div>
+            <div class="details">
+                <div class="position section">
+                    <div class="latitude">
+                        Lat: <span id="pos-lat"></span>
+                    </div>
+                    <div class="longitude">
+                        Long: <span id="pos-long"></span>
+                    </div>
+                </div>
+                <div class="location section">
+                    <div class="city">
+                        City: <span id="loc-city"></span>
+                    </div>
+                    <div class="region">
+                        Region: <span id="loc-region"></span>
+                    </div>
+                </div>
+                <div class="host-details section">
+                    <div class="org">
+                        Organisation: <span id="host-org"></span>
+                    </div>
+                    <div class="hostname">
+                        Hostname: <span id="host-name"></span>
+                    </div>
+                </div>
+            </div>
+        </header>
+
+        <section class="section-map">
+            <h1>Your Current Location</h1>
+            <iframe id="g-map" src="" frameborder="0" style="border:0"></iframe>
+        </section>
+
+        <section class="more-details">
+            <h1>More Information About You</h1>
+            <div class="details">
+                <div class="time-zone section">
+                    Time Zone: <span id="time-zone"></span>
+                </div>
+                <div class="date-n-time section">
+                    Date and Time: <span id="date-n-time"></span>
+                </div>
+                <div class="pincode section">
+                    Pincode: <span id="pincode"></span>
+                </div>
+                <div class="msg section">
+                    Message: <span id="msg"></span>
+                </div>
+            </div>
+        </section>
+
+        <section class="post-offices">
+            <h1>Post Offices Near You</h1>
+            <div class="search-bar">
+                <div class="wrapper">
+                    <i class="fa-solid fa-magnifying-glass"></i>
+                    <input type="text" id="searchBar" placeholder="Search By Name">
+                </div>
+            </div>
+            <div class="post-office-list" id="post-office-list">
+            </div>
+        </section>
+    </main>
+</body>
+</html>

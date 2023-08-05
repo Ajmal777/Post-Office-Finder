@@ -1,0 +1,34 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&family=Inter:wght@300;400;500;600;700&display=swap');
+body{
+    margin: 0;
+    font-family: 'Inter', sans-serif;
+    background-color: black;
+    color: #B8BCCC80;
+}
+
+
+h1{
+    text-align: center;
+    color: #B8BCCC;
+}
+
+button:hover{
+    cursor: pointer;
+}
+
+.section-map{
+    height: 100vh;
+    width: 100%;
+    background-color: #575A85;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.section-map > h1{
+    color: #B8BCCC;
+}
+#g-map{
+    width: 90%;
+    height: 80%;
+}
