@@ -43,8 +43,10 @@ async function getIP(){
 }
 
 async function getUserLocationDetails(){
-    const data = await fetch(`https://ipinfo.io/${USER_IP}?token=${TOKEN}`);
-    USER_LOC_OBJ = await data.json();
+    await fetch(`https://ipinfo.io/${USER_IP}?token=${TOKEN}`)
+    .then(res => res.json())
+    .then(res => USER_LOC_OBJ = res)
+    .catch((err) => alert("An error occured!! Try turning off your adBlocker then refresh the website. If the problem persists, try again later."));
 
     city.innerText = USER_LOC_OBJ.city;
     region.innerText = USER_LOC_OBJ.region;
@@ -134,7 +136,4 @@ startBtn.addEventListener('click', ()=>{
     mainPage.style.display = 'block';
    
     getUserLocationDetails();
-
-    alert("If data doesn't load, then turn off your adBlocker and refresh the website.");
-
 })

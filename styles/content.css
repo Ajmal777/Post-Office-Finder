@@ -120,6 +120,12 @@ header span{
     gap: 15px;
     color: #B8BCCC;
     border-radius: 10px;
+    box-shadow: none;
+}
+
+.post-office:hover{
+    box-shadow: 0px 3px 15px #575a85;
+    transition: box-shadow 0.2s ease-in-out;
 }
 
 .post-office > div{
