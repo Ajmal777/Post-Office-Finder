@@ -26,10 +26,10 @@ const po_list = doc.getElementById('post-office-list');
 const searchBar = doc.getElementById('searchBar');
 
 let USER_IP;
-let USER_LOC_OBJ = {};
+let USER_LOC_OBJ = {};       //Stores user location details
 let TOKEN = '0265ad6b82d2c1';
 
-let PO_LIST = [];
+let PO_LIST = [];   //PO == Post Office
 
 // Get user's IP Address
 async function getIP(){
@@ -48,6 +48,7 @@ async function getUserLocationDetails(){
     const data = await fetch(`https://ipinfo.io/${USER_IP}?token=${TOKEN}`);
     USER_LOC_OBJ = await data.json();
 
+    alert("If the data isn't loading, Try turning off your adBlocker then refresh the website.")
 
     city.innerText = USER_LOC_OBJ.city;
     region.innerText = USER_LOC_OBJ.region;
